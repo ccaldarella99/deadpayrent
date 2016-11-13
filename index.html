@@ -1,6 +1,57 @@
-<html>
+
+
+<!DOCTYPE html>
+<html >
+
 <head>
-  <title>Dead Pay Rent</title>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - deadpayrent</title>
+  
+  
+  
+  
+      <style>
+      .new {
+  background-color:black;
+}
+.top-img {
+  width:80%;
+}
+.top {
+  text-align:center;
+}
+#icons{
+  font-size:36px;
+  color:#aaa;
+}
+#icons:hover {
+  color:white;
+}
+.headline{
+  font-size:4vw;
+}
+.body-text {
+  font-size:2.5vw;
+}
+#album {
+  border:2px solid white;
+  width:190px;
+}
+    </style>
+
+  
+  
+  
+  
+</head>
+
+<body translate="no" >
+
+  <head>
+  <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -10,71 +61,141 @@
 </head>
 <body class="new">
 
-
-<div>
-<!--Banner Here
-need to get a good image to put here
-adding some nav buttons might be good 
-I like the Hamburger button on hte top Left personally -->
+  
+  <div class="banner">
   <div class="row top">
     <img class="top-img" src="https://raw.githubusercontent.com/ccaldarella99/deadpayrent/master/res/dprwrite_long5.jpg">
   </div>
-
-<!-- put social media buttons on the bottom right? -->
-
+  
   <div class="row" id="links">
     <div class="col-xs-6">
     </div>
-    <div class="col-xs-1">
-      <a href="https://www.facebook.com/deadpayrent/" target="_blank" class="icon facebook">Facebook</a>
-    </div>
-    <div class="col-xs-1" id="fb">
-      <a href="https://www.twitter.com/deadpayrent" target="_blank" class="icon twitter">Twitter</a>
-    </div>
-    <div class="col-xs-1" id="fb">
-      <a href="https://www.instagram.com/deadpayrent/" target="_blank" class="icon instagram">Instagram</a>
-    </div>
-    <div class="col-xs-1" id="fb">
-      <a href="https://play.google.com/store/music/album/Dead_Pay_Rent_Fake_Filthy_Love?id=Bhoyqcosldiksmyuba4nzbco6c4" target="_blank" class="icon gpm">GooglePlay</a>
-    </div>
-    <div class="col-xs-1">
-      <a target="_blank" class="icon youtube" href="https://www.youtube.com/user/deadpayrent">YouTube</a>
+    <div class="col-xs-5 text-right">
+      <a href="https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=itunes/" target="_blank">
+        <i class="fa fa-music" id="icons"></i>
+      </a>
+      &nbsp;&nbsp;
+    <!--/div>
+    <div class="col-xs-1" id="fb"-->
+      <a href="https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=music/" target="_blank">
+        <i class="fa fa-apple" id="icons"></i>
+      </a>
+      &nbsp;&nbsp;
+    <!--/div>
+    <div class="col-xs-1" id="fb"-->
+      <a href="https://open.spotify.com/album/7LxcSkeCmt6yA7TDpBckti/" target="_blank">
+        <i class="fa fa-spotify" id="icons"></i>
+      </a>
+      &nbsp;&nbsp;
+    <!--/div>
+    <div class="col-xs-1" id="fb"-->
+      <a href="https://play.google.com/store/music/album/Dead_Pay_Rent_Fake_Filthy_Love?id=Bhoyqcosldiksmyuba4nzbco6c4" target="_blank">
+        <i class="fa fa-android" id="icons"></i>
+      </a>
+      &nbsp;&nbsp;
+    <!--/div>
+    <div class="col-xs-1"-->
+      <a target="_blank" href="http://www.amazon.com/gp/product/B0186SE6NO/">
+        <i class="fa fa-amazon" id="icons"></i>
+      </a>
+      &nbsp;&nbsp;
+    <!--/div>
+    <div class="col-xs-1"-->
+      <a target="_blank" href="https://deadpayrent.bandcamp.com/">
+        <i class="fa fa-bandcamp" id="icons"></i>
+      </a>
     </div>
     <div class="col-xs-1"></div>
-    </div>
+  </div>
   </div>
 
-</div>
+  <div class="left-col">
+    <hr>
+  <div class="row" id="links">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-3">
+      &nbsp;
+      <a href="https://www.facebook.com/deadpayrent/" target="_blank">
+        <i class="fa fa-facebook-square" id="icons"></i>
+      </a>
+      &nbsp;&nbsp;
+    <!--/div>
+    <div class="col-xs-1" id="fb"-->
+      <a href="https://www.twitter.com/deadpayrent" target="_blank">
+        <i class="fa fa-twitter-square" id="icons"></i>
+      </a>
+      &nbsp;&nbsp;
+    <!--/div>
+    <div class="col-xs-1" id="fb"-->
+      <a href="https://www.instagram.com/deadpayrent/" target="_blank">
+        <i class="fa fa-instagram" id="icons"></i>
+      </a>
+      &nbsp;&nbsp;
+    <!--/div>
+    <div class="col-xs-1"-->
+      <a target="_blank" href="https://www.youtube.com/user/deadpayrent">
+        <i class="fa fa-youtube-square" id="icons"></i>
+      </a>
+      <br><br>
+      <a target="_blank" href="https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=itunes">
+      <img id="album" src="https://raw.githubusercontent.com/ccaldarella99/deadpayrent/master/res/FFL_AlbumCover.jpg" />
+      </a>
+    </div>
+    <div class="col-xs-7">
+      
+      <div>
+        <div class="headline">Blog Posts?</div>
+        <p class="body-text">
+        Give me some ideas as to what we want to put here, please!
+        </p>
+        <p class="body-text">
+          We should probably get some pictures taken...
+        </p>
+      </div>
+      
+    </div>
+    <div class="col-xs-1">
+    </div>
+  </div>
+  </div>
 
 
+<!--
+More Links:
+<br>
+https://open.spotify.com/album/7LxcSkeCmt6yA7TDpBckti
+<br>
+https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=itunes
+<br>
+https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?app=music&ign-mpt=uo%3D4
+<br>
+http://www.amazon.com/gp/product/B0186SE6NO
+<br>
+-->
+  
+  <br><br><br><br><br>
+  <div id="foot">
+  </div>
 
-<div>
-<!-- Scrollable body here -->
+</body>
+  
+  
+    <script>
+    $(document).ready(function() {
+  
+  
+});
 
-<div>
-<!-- Left side info: stationary 
-Perhaps put music buttons here:
-iTunes, Apple Music, Spotify, GPM, Amazon, etc.
-(can get links from DistroKid) -->
+/*
+Add Mailing List / Subscribe button
+Plan is with new domain to get an info@deadpayrent.com e-mail address
+Get requests and send limited updates for shows and merch (ie music) 
+*/
+  </script>
 
-
-</div>
-
-<div>
-
-<!-- perhaps have some posts that are accessible form a DB 
-these will be mostly on the right side of the page -->
-
-</div>
-
-</div>
-
-
-<div>
-<!-- Footer here -->
-
-</div>
-
+  
+  
 
 </body>
 </html>
+ 

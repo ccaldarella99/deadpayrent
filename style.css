@@ -7,31 +7,20 @@
 .top {
   text-align:center;
 }
-.icon {
-  width:25px;
-  height:25px;
-  display:block;
-  text-indent:-9999px;
-  background-image:url(http://tridentdesign.com/wp-content/uploads/2012/12/gemicon.jpg);
-  background-repeat:no-repeat;
+#icons{
+  font-size:36px;
+  color:#aaa;
 }
-.facebook {
-  background-position:-140px -115px;
-  border-radius:100%;
+#icons:hover {
+  color:white;
 }
-.twitter {
-  background-position:-186px -115px;
-  border-radius:100%;
+.headline{
+  font-size:4vw;
 }
-.instagram {
-  background-position:-326px -115px;
-  border-radius:100%;
+.body-text {
+  font-size:2.5vw;
 }
-.gpm {
-  background-position:0px -189px;
-  border-radius:100%;
-}
-.youtube {
-  background-position:-325px -526px;
-  border-radius:100%;
+#album {
+  border:2px solid white;
+  width:190px;
 }
