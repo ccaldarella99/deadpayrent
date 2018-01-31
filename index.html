@@ -1,201 +1,379 @@
-
-
 <!DOCTYPE html>
-<html >
+<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
-  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
-  <title>CodePen - deadpayrent</title>
-  
-  
-  
-  
-      <style>
-      .new {
-  background-color:black;
-}
-.top-img {
-  width:80%;
-}
-.top {
-  text-align:center;
-}
-#icons{
-  font-size:36px;
-  color:#aaa;
-}
-#icons:hover {
-  color:white;
-}
-.headline{
-  font-size:4vw;
-}
-.body-text {
-  font-size:2.5vw;
-}
-#album {
-  border:2px solid white;
-  width:190px;
-}
-    </style>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+  		<link rel="shortcut icon" type="image/x-icon" href="res/dprwrite_short2.png" />
 
-  
-  
-  
-  
-</head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<body translate="no" >
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <head>
-  <title></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+		<title>Dead Pay Rent</title>
+	</head>
+	<body class="new">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<div id="big" class="page big">
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-</head>
-<body class="new">
-
-  
-  <div class="banner">
-  <div class="row top">
-    <img class="top-img" src="https://raw.githubusercontent.com/ccaldarella99/deadpayrent/master/res/dprwrite_long5.jpg">
-  </div>
-  
-  <div class="row" id="links">
-    <div class="col-xs-6">
-    </div>
-    <div class="col-xs-5 text-right">
-      <a href="https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=itunes/" target="_blank">
-        <i class="fa fa-music" id="icons"></i>
-      </a>
-      &nbsp;&nbsp;
-    <!--/div>
-    <div class="col-xs-1" id="fb"-->
-      <a href="https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=music/" target="_blank">
-        <i class="fa fa-apple" id="icons"></i>
-      </a>
-      &nbsp;&nbsp;
-    <!--/div>
-    <div class="col-xs-1" id="fb"-->
-      <a href="https://open.spotify.com/album/7LxcSkeCmt6yA7TDpBckti/" target="_blank">
-        <i class="fa fa-spotify" id="icons"></i>
-      </a>
-      &nbsp;&nbsp;
-    <!--/div>
-    <div class="col-xs-1" id="fb"-->
-      <a href="https://play.google.com/store/music/album/Dead_Pay_Rent_Fake_Filthy_Love?id=Bhoyqcosldiksmyuba4nzbco6c4" target="_blank">
-        <i class="fa fa-android" id="icons"></i>
-      </a>
-      &nbsp;&nbsp;
-    <!--/div>
-    <div class="col-xs-1"-->
-      <a target="_blank" href="http://www.amazon.com/gp/product/B0186SE6NO/">
-        <i class="fa fa-amazon" id="icons"></i>
-      </a>
-      &nbsp;&nbsp;
-    <!--/div>
-    <div class="col-xs-1"-->
-      <a target="_blank" href="https://deadpayrent.bandcamp.com/">
-        <i class="fa fa-bandcamp" id="icons"></i>
-      </a>
-    </div>
-    <div class="col-xs-1"></div>
-  </div>
-  </div>
-
-  <div class="left-col">
-    <hr>
-  <div class="row" id="links">
-    <div class="col-xs-1"></div>
-    <div class="col-xs-3">
-      &nbsp;
-      <a href="https://www.facebook.com/deadpayrent/" target="_blank">
-        <i class="fa fa-facebook-square" id="icons"></i>
-      </a>
-      &nbsp;&nbsp;
-    <!--/div>
-    <div class="col-xs-1" id="fb"-->
-      <a href="https://www.twitter.com/deadpayrent" target="_blank">
-        <i class="fa fa-twitter-square" id="icons"></i>
-      </a>
-      &nbsp;&nbsp;
-    <!--/div>
-    <div class="col-xs-1" id="fb"-->
-      <a href="https://www.instagram.com/deadpayrent/" target="_blank">
-        <i class="fa fa-instagram" id="icons"></i>
-      </a>
-      &nbsp;&nbsp;
-    <!--/div>
-    <div class="col-xs-1"-->
-      <a target="_blank" href="https://www.youtube.com/user/deadpayrent">
-        <i class="fa fa-youtube-square" id="icons"></i>
-      </a>
-      <br><br>
-      <a target="_blank" href="https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=itunes">
-      <img id="album" src="https://raw.githubusercontent.com/ccaldarella99/deadpayrent/master/res/FFL_AlbumCover.jpg" />
-      </a>
-    </div>
-    <div class="col-xs-7">
-      
-      <div>
-        <div class="headline">Blog Posts?</div>
-        <p class="body-text">
-        Give me some ideas as to what we want to put here, please!
-        </p>
-        <p class="body-text">
-          We should probably get some pictures taken...
-        </p>
-      </div>
-      
-    </div>
-    <div class="col-xs-1">
-    </div>
-  </div>
-  </div>
+			<div class="banner big">
+				<div class="row top">
+					<img class="top-img" src="res/dprwrite_long6.jpg">
+				</div>
+			</div>
+			<div class="row big">
+				<div class="col-xs-6">&nbsp;</div>
+				<div class="col-xs-5 text-right">
+					&nbsp;&nbsp;
+					<a href="https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=music/" title="Apple Music" target="_blank">
+						<i class="fa fa-apple" id="icons"></i>
+					</a>
+					&nbsp;&nbsp;
+					<a href="https://open.spotify.com/album/7LxcSkeCmt6yA7TDpBckti/" title="Spotify" target="_blank">
+						<i class="fa fa-spotify" id="icons"></i>
+					</a>
+					&nbsp;&nbsp;
+					<a href="https://play.google.com/store/music/album/Dead_Pay_Rent_Fake_Filthy_Love?id=Bhoyqcosldiksmyuba4nzbco6c4" title="Google Play" target="_blank">
+						<i class="fa fa-android" id="icons"></i>
+					</a>
+					&nbsp;&nbsp;
+					<a target="_blank" title="BandCamp"  href="https://deadpayrent.bandcamp.com/">
+						<i class="fa fa-bandcamp" id="icons"></i>
+					</a>
+					&nbsp;&nbsp;
+				</div>
+				<div class="col-xs-1 big">&nbsp;</div>
+			</div>
+			<div class="row big"><hr></div>
 
 
-<!--
-More Links:
-<br>
-https://open.spotify.com/album/7LxcSkeCmt6yA7TDpBckti
-<br>
-https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=itunes
-<br>
-https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?app=music&ign-mpt=uo%3D4
-<br>
-http://www.amazon.com/gp/product/B0186SE6NO
-<br>
--->
-  
-  <br><br><br><br><br>
-  <div id="foot">
-  </div>
+				<div class="left-col">
+					<div class="row" id="links">
+						<div class="col-xs-1"></div>
+						<div class="col-xs-3">
+							&nbsp;&nbsp;
+							<a href="https://www.facebook.com/deadpayrent/" title="Facebook"  target="_blank">
+								<i class="fa fa-facebook-square big" id="icons"></i>
+							</a>
+							&nbsp;
+							<a href="https://www.twitter.com/deadpayrent" target="_blank" title="Twitter">
+								<i class="fa fa-twitter-square big" id="icons"></i>
+							</a>
+							&nbsp;
+							<a href="https://www.instagram.com/deadpayrent/" target="_blank" title="Instagram">
+								<i class="fa fa-instagram big" id="icons"></i>
+							</a>
+							&nbsp;
+							<a target="_blank" title="Youtube" href="https://www.youtube.com/user/deadpayrent">
+								<i class="fa fa-youtube-square big" id="icons"></i>
+							</a>
+							<br><br>
+							<a target="_blank" title="Fake Filthy Love" href="https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=itunes">
+								<img class="big" id="album" src="res/FFL_AlbumCover_700.jpg" />
+							</a>
 
-</body>
-  
-  
-    <script>
-    $(document).ready(function() {
-  
-  
-});
+						</div>
+						<div class="col-xs-7">
+			  
+							<div class="row">
+								<div class="nav-bar big">
+									<div class="nav-link on-focus big" id="music_btn">
+										<a class="navlinks" id="load_music" onclick="loadContent('music',0)" href="javascript:void(0);">
+											Music</a>
+									</div>
+									<div class="nav-link" id="photo_btn">
+										<a class="navlinks" id="load_photos" onclick="loadContent('photo',0)" href="javascript:void(0);">
+											Photos</a>
+									</div>
+									<div class="nav-link" id="video_btn">
+										<a class="navlinks" id="load_videos" onclick="loadContent('video',0)" href="javascript:void(0);">
+											Videos</a>
+									</div>
+									<div class="nav-link" id="press_btn">
+										<a class="navlinks" id="load_press" onclick="loadContent('press',0)" href="javascript:void(0);">
+											Press</a>
+									</div>
+									<div class="nav-link" id="contact_btn">
+										<a class="navlinks" id="load_contact" onclick="loadContent('contact',0)" href="javascript:void(0);">
+											Contact Us</a>
+									</div>
+								</div>
+							</div>
 
-/*
-Add Mailing List / Subscribe button
-Plan is with new domain to get an info@deadpayrent.com e-mail address
-Get requests and send limited updates for shows and merch (ie music) 
-*/
-  </script>
+							
+							<div class="row big">
+								<div class="content show" id="music">
+									<img src="res/FFL_SidewaysLogo_1c.jpg" class="album-promo" />
+									<p class="content-text">
+										Listen to our latest album at any of the following locations!
+									</p>
+									<p class="content-text">
+										<a href="https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=itunes/" title="iTunes" target="_blank">
+											<i class="fa fa-music" id="icons"></i>
+										</a>
+										&nbsp;&nbsp;
+										<a href="https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=music/" title="Apple Music" target="_blank">
+											<i class="fa fa-apple" id="icons"></i>
+										</a>
+										&nbsp;&nbsp;
+										<a href="https://open.spotify.com/album/7LxcSkeCmt6yA7TDpBckti/" title="Spotify" target="_blank">
+											<i class="fa fa-spotify" id="icons"></i>
+										</a>
+										&nbsp;&nbsp;
+										<a href="https://play.google.com/store/music/album/Dead_Pay_Rent_Fake_Filthy_Love?id=Bhoyqcosldiksmyuba4nzbco6c4" title="Google Play" target="_blank">
+											<i class="fa fa-android" id="icons"></i>
+										</a>
+										&nbsp;&nbsp;
+										<a target="_blank" title="Amazon Music" href="http://www.amazon.com/gp/product/B0186SE6NO/">
+											<i class="fa fa-amazon" id="icons"></i>
+										</a>
+										&nbsp;&nbsp;
+										<a target="_blank" title="BandCamp"  href="https://deadpayrent.bandcamp.com/">
+											<i class="fa fa-bandcamp" id="icons"></i>
+										</a>
+									</p>
+								</div>
+								<div class="content hide" id="photo">
+									<div class="headline">Coming Soon! Photos!</div>
+								</div>
+								<div class="content hide" id="video">
+									<div class="headline">Coming Soon! Videos!</div>
+								</div>
+								<div class="content hide" id="press">
+									<div class="headline">
+										<a href="https://www.axs.com/news/get-to-know-a-denver-band-dead-pay-rent-65856" target="_blank">
+											AXS Interview, Get to know a Denver Band - Sep 2015</a>
+									</div>
+									<div class="headline">
+										<a target="_blank" href="http://marqueemag.com/2016/01/dead-pay-rent-fake-filthy-love/">
+											Marquee Magazine - Jan 2016</a>
+									</div>
+									<div class="headline">
+										<a target="_blank" href="http://theknow.denverpost.com/2016/02/19/nile-rodgers-billy-strings-dead-pay-rent/113762/">
+											Denver Post: Best Shows - Feb 2016</a>
+									</div>
+								
+								</div>
+								<div class="content hide" id="contact">
+									<p class="content-text">
+										<strong>
+											Email us to book an event and for other inquiries: 
+										</strong>
+									</p>
+									<a class="content-text" href="mailto:dead.pay.rent@gmail.com">
+										dead.pay.rent@gmail.com
+									</a>
+								</div>
+								<div class="overlay"  onmousedown="mdown(event)" onmouseup="mup(event)" ontouchstart="mdown(event)" ontouchend="mup(event)" id="swipe">
+									&nbsp;
+								</div>
+							</div>
+					
+						</div>
+					</div>
+				</div>
+		</div>
 
-  
-  
+					
+					
+					
+					
+		<div id="mob" class="page mob">
+			<div class="banner mob">
+				<div class="row top">
+					<img class="top-img" src="res/dprwrite_long6rgb.jpg">
+				</div>
+			</div>
+					
+					
+					
+					
+			<div class="row">
+				<div class="col-xs-4 text-right;">
+					
+					<div class="hamu" onclick="hamburger()">
+						<div id="hamburger"></div>
+						<div id="hamburger"></div>
+						<div id="hamburger"></div>
+					</div>
+						<div id="menu" class="nav-bar mob menu hide">
+							<br>
+							<div class="nav-link on-focus" id="music_btn2">
+								<a class="navlinks" id="load_music" onclick="loadContent('music2',1)" href="javascript:void(0);">
+									Music</a>
+							</div>
+							<br><br>
+							<div class="nav-link" id="photo_btn2">
+								<a class="navlinks" id="load_photos" onclick="loadContent('photo2',1)" href="javascript:void(0);">
+									Photos</a>
+							</div>
+							<br><br>
+							<div class="nav-link" id="video_btn2">
+								<a class="navlinks" id="load_videos" onclick="loadContent('video2',1)" href="javascript:void(0);">
+									Videos</a>
+							</div>
+							<br><br>
+							<div class="nav-link" id="press_btn2">
+								<a class="navlinks" id="load_press" onclick="loadContent('press2',1)" href="javascript:void(0);">
+									Press</a>
+							</div>
+							<br><br>
+							<div class="nav-link" id="contact_btn2">
+								<a class="navlinks" id="load_contact" onclick="loadContent('contact2',1)" href="javascript:void(0);">
+									Contact Us</a>
+							</div>
+							<br>
+						</div>
 
-</body>
+				</div>
+				<div class="col-xs-7 text-right">
+					&nbsp;&nbsp;
+					<a href="https://www.facebook.com/deadpayrent/" title="Facebook"  target="_blank">
+						<i class="fa fa-facebook-square big" id="iconF"></i>
+					</a>
+					&nbsp;
+					<a href="https://www.twitter.com/deadpayrent" target="_blank" title="Twitter">
+						<i class="fa fa-twitter-square big" id="iconF"></i>
+					</a>
+					&nbsp;
+					<a href="https://www.instagram.com/deadpayrent/" target="_blank" title="Instagram">
+						<i class="fa fa-instagram big" id="iconF"></i>
+					</a>
+					&nbsp;
+					<a target="_blank" title="Youtube" href="https://www.youtube.com/user/deadpayrent">
+						<i class="fa fa-youtube-square big" id="iconF"></i>
+					</a>
+				</div>
+			</div>
+			
+					
+			<div class="row">
+				<div class="col-xs-12">
+					<hr class="hr">
+				</div>
+			</div>
+					
+					
+					
+					
+			<div class="row">
+				<div class="col-xs-1">&nbsp;</div>
+				<div class="col-xs-10">
+					<div class="content show" id="music2">
+						<div class="headline">Music</div>
+						<img src="res/FFL_SidewaysLogo_1c.jpg" class="album-promo" />
+						<p class="content-text">
+							Listen to our latest album at any of the locations listed at the bottom!
+						</p>
+					</div>
+					<div class="content hide" id="photo2">
+						<div class="headline">Photos</div>
+						<div class="headline">Coming Soon! Photos!</div>
+					</div>
+					<div class="content hide" id="video2">
+						<div class="headline">Videos</div>
+						<div class="headline">Coming Soon! Videos!</div>
+					</div>
+					<div class="content hide" id="press2">
+						<div class="headline">Press</div>
+						<div class="headline">
+							<a target="_blank" class="presslink" href="https://www.axs.com/news/get-to-know-a-denver-band-dead-pay-rent-65856">
+								<div class="presstitle">AXS Interview</div>
+								<div>Get to know a Denver Band</div>
+								<div class="pressdate">-Sep 2015</div>
+							</a>
+						</div>
+						<div class="headline">
+							<a target="_blank" class="presslink" href="http://marqueemag.com/2016/01/dead-pay-rent-fake-filthy-love/">
+								<div class="presstitle">Marquee Magazine</div>
+								<div class="pressdate">-Jan 2016</div>
+							</a>
+						</div>
+						<div class="headline">
+							<a target="_blank" class="presslink" href="http://theknow.denverpost.com/2016/02/19/nile-rodgers-billy-strings-dead-pay-rent/113762/">
+								<div class="presstitle">Denver Post:</div>
+								<div>Best Shows</div>
+								<div class="pressdate">-Feb 2016</div>
+							</a>
+						</div>
+					
+					</div>
+					<div class="content hide" id="contact2">
+						<div class="headline">Contact us</div>
+						<p class="content-text">
+							<strong>
+								Email us to book an event and for other inquiries: 
+							</strong>
+						</p>
+						<a class="content-text" href="mailto:dead.pay.rent@gmail.com">
+							dead.pay.rent@gmail.com
+						</a>
+					</div>
+					<div class="overlay"  onmousedown="mdown(event)" onmouseup="mup(event)" ontouchstart="mdown(event)" ontouchend="mup(event)" id="swipe">
+						&nbsp;
+					</div>
+				</div>
+				<div class="col-xs-1">&nbsp;</div>
+			</div>
+
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+
+				
+				
+				
+				
+				
+				
+				
+				
+			<br><br><br>
+			<div id="foot" class="mob text-center">
+				<p class="content-text">
+					<a href="https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=itunes/" title="iTunes" target="_blank">
+						<i class="fa fa-music" id="iconF"></i>
+					</a>
+					&nbsp;&nbsp;
+					<a href="https://itunes.apple.com/us/album/fake-filthy-love/id1060327980?uo=4&app=music/" title="Apple Music" target="_blank">
+						<i class="fa fa-apple" id="iconF"></i>
+					</a>
+					&nbsp;&nbsp;
+					<a href="https://open.spotify.com/album/7LxcSkeCmt6yA7TDpBckti/" title="Spotify" target="_blank">
+						<i class="fa fa-spotify" id="iconF"></i>
+					</a>
+					&nbsp;&nbsp;
+					<a href="https://play.google.com/store/music/album/Dead_Pay_Rent_Fake_Filthy_Love?id=Bhoyqcosldiksmyuba4nzbco6c4" title="Google Play" target="_blank">
+						<i class="fa fa-android" id="iconF"></i>
+					</a>
+					&nbsp;&nbsp;
+					<a target="_blank" title="Amazon Music" href="http://www.amazon.com/gp/product/B0186SE6NO/">
+						<i class="fa fa-amazon" id="iconF"></i>
+					</a>
+					&nbsp;&nbsp;
+					<a target="_blank" title="BandCamp"  href="https://deadpayrent.bandcamp.com/">
+						<i class="fa fa-bandcamp" id="iconF"></i>
+					</a>
+				</p>
+			</div>
+		  </div>
+
+		<script>
+		  </script>
+		<script src="app.js"></script>
+
+
+	</body>
 </html>
  
