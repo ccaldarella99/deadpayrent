@@ -137,10 +137,37 @@
 								</div>
 								<div class="content hide" id="photo">
 									<div class="headline">Coming Soon! Photos!</div>
-									<div class="carousel">
-										<div>
+									
+									<div id="img-reel" class="h-center">
+										<div id="top-row">
+											<img class="reel" src="work/DSC_0614.JPG" onclick="openOverlay('slideshow', 'slideshow-contents', 0);" />
+											<img class="reel" src="work/DSC_0620.JPG" onclick="openOverlay('slideshow', 'slideshow-contents', 1);" />
+											<img class="reel" src="work/DSC_0622.JPG" onclick="openOverlay('slideshow', 'slideshow-contents', 2);" />
+										</div>
+										<div id="bottom-row">
+											<img class="reel" src="work/DSC_0624.JPG" onclick="openOverlay('slideshow', 'slideshow-contents', 3);" />
+											<img class="reel" src="work/DSC_0614.JPG" onclick="openOverlay('slideshow', 'slideshow-contents', 4);" />
 										</div>
 									</div>
+									<div class="ss-overlay" id="slideshow">
+										<a href="javascript:void(0)" class="close-btn" onclick="closeOverlay('slideshow','slideshow-contents');">&times;</a>
+										<div class="item-overlay" id="slideshow-contents">
+											<div class="ssLeft l-btn" onclick="slideShow(-1)">
+												<label id="left-btn">&#10094;</label>
+											</div>
+											<img class="slide-img" src="work/DSC_0614.JPG" />
+											<img class="slide-img" src="work/DSC_0620.JPG" />
+											<img class="slide-img" src="work/DSC_0622.JPG" />
+											<img class="slide-img" src="work/DSC_0624.JPG" />
+											<div class="ssRight r-btn" onclick="slideShow(1)">
+												<label id="right-btn">&#10095;</label>
+											</div>
+											<p id="escape">
+												(press escape to exit)
+											</p>
+										</div>
+									</div>
+									
 								</div>
 								<div class="content hide" id="video">
 									<div class="headline">Coming Soon! Videos!</div>

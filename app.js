@@ -1,6 +1,5 @@
 var myElement = document.getElementById('music');
 var swipeElement = document.getElementById('swipe');
-//var music = new Hammer(myElement);
 var list = [['music', 'photo', 'video', 'press','contact'],
 			['music2', 'photo2', 'video2', 'press2','contact2']];
 var listBtn = [['music_btn', 'photo_btn', 'video_btn', 'press_btn','contact_btn'],
@@ -11,11 +10,8 @@ var getId = 0;
 var x = 0;
 var y = 0;
 
-/*document.addEventListener("touch", function{
-	console.log("touch detected");
-});*/
+let picsArray = ["DCS_0614.JPG", "DCS_0620.JPG", "DCS_0622.JPG", "DCS_0624.JPG"];
 
-//music.on("swipe tap press",//swipe(event));
 function mdown(ev) {
 	if (ev.type == "mousedown")
 	{
@@ -25,10 +21,8 @@ function mdown(ev) {
 		x = ev.changedTouches[0].pageX;
 		y = ev.changedTouches[0].pageY;
 	}
-	/*console.log(ev.type);
-	console.log("\nx: " + x + ", y: " + y);
-	console.log("event type: " + ev.type);*/
 }
+
 function mup(ev) {
 	if (ev.type == "mouseup")
 	{
@@ -40,13 +34,10 @@ function mup(ev) {
 	}
 	var dX = x - newX;
 	var dY = y - newY;
-	/*console.log("event type: " + ev.type);
-	console.log("new x: " + newX + ", new y: " + newY);
-	console.log("dx: " + dX + ", dy: " + dY);*/
 	for (var i=0; i<listLength2; i++)
 	{
 		if(document.getElementById(list[1][i]) == myElement)
-		{ getId = i; /*console.log(list[i]);*/ }
+		{ getId = i; }
 	}
 	if (dX!=0 && Math.abs(dY/dX) < 1)
 	{
@@ -68,8 +59,6 @@ function mup(ev) {
 			myElement = list[1][getId]
 			loadContent(myElement, 1);
 		}
-		/*console.log("element num: " + getId);
-		console.log("element name: " + myElement);//*/
 	}
 	var menu = document.getElementById('menu');
 	var changed = false;
@@ -88,9 +77,6 @@ function loadContent(name, num) {
 			document.getElementById(list[num][i]).classList.remove('hide');
 			document.getElementById(list[num][i]).classList.add('show');
 			document.getElementById(listBtn[num][i]).classList.add('on-focus');
-			//myElement = document.getElementById(list[i]);
-			//mc = Hammer(myElement);
-			//console.log(i);
 		} else {
 			document.getElementById(list[num][i]).classList.remove('show');
 			document.getElementById(list[num][i]).classList.add('hide');
@@ -114,4 +100,61 @@ function hamburger() {
 			changed = true;
 		}
 }
+
+
+var thisSlide = 0;
+var picSlide = 0;
+slideShow(picSlide);
+
+document.onkeydown = function(evt) {
+	evt = evt || window.event;
+	var isEscape = false;
+	if ("key" in evt) {
+		isEscape = (evt.key == "Escape" || evt.key == "Esc");
+	} else {
+		isEscape = (evt.keyCode == 27);
+	}
+	if (isEscape) {
+		closeOverlay('lodging', 'lodging-contents');
+		closeOverlay('slideshow', 'slideshow-contents');
+	}
+};
+
+function slideShow(n) {
+	var pSlides = document.getElementsByClassName("slide-img");
+	var maxSlides = pSlides.length;
+	
+	picSlide += n;
+	if (picSlide >= maxSlides) {
+		picSlide = 0;
+	} else if (picSlide < 0) {
+		picSlide = maxSlides-1;
+	}
+
+	for (var i = 0; i < maxSlides; i++) {
+		pSlides[i].style.display = "none";
+	}
+	
+	pSlides[picSlide].style.display = "inline-block";
+}
+
+
+function openOverlay(item, content, n) {
+	if (n>=0) {
+		picSlide = 0;
+		slideShow(n);
+	}
+	document.getElementById(content).style.display = "inline-block";
+	document.getElementById(item).style.width = "100%";
+	document.getElementById("escape").style.display = "block";
+}
+
+function closeOverlay(item, content) {
+	document.getElementById(content).style.display = "none";
+	document.getElementById(item).style.width = "0%";
+	document.getElementById("escape").style.display = "none";
+}
+
+
+
 
