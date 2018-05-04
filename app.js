@@ -11,6 +11,77 @@ var x = 0;
 var y = 0;
 
 let picsArray = ["DCS_0614.JPG", "DCS_0620.JPG", "DCS_0622.JPG", "DCS_0624.JPG"];
+var thisSlide = 0;
+var picSlide = 0;
+slideShow(picSlide);
+closeOverlay('slideshow', 'slideshow-contents');
+
+
+//Slide Show OVERLAY
+
+document.onkeydown = function(evt) {
+	evt = evt || window.event;
+	var isEscape = false;
+	var isLeft = false;
+	var isRight = false;
+	
+	if ("key" in evt) {
+		isEscape = (evt.key == "Escape" || evt.key == "Esc");
+		isLeft = (evt.key == "ArrowLeft");
+		isRight = (evt.key == "ArrowRight");
+	} else {
+		isEscape = (evt.keyCode == 27);
+		isLeft = (evt.keyCode == 37);
+		isRight = (evt.keyCode == 39);
+	}
+	if (isEscape) {
+		closeOverlay('slideshow', 'slideshow-contents');
+	}
+	if (isLeft) {
+		slideShow(-1);
+	}
+	if (isRight) {
+		slideShow(1);
+	}
+};
+
+function slideShow(n) {
+	var pSlides = document.getElementsByClassName("slide-img");
+	var maxSlides = pSlides.length;
+	
+	picSlide += n;
+	if (picSlide >= maxSlides) {
+		picSlide = 0;
+	} else if (picSlide < 0) {
+		picSlide = maxSlides-1;
+	}
+
+	for (var i = 0; i < maxSlides; i++) {
+		pSlides[i].style.display = "none";
+	}
+	
+	pSlides[picSlide].style.display = "inline-block";
+}
+
+
+function openOverlay(item, content, n) {
+	if (n>=0) {
+		picSlide = 0;
+		slideShow(n);
+	}
+	document.getElementById(content).style.display = "inline-block";
+	document.getElementById(item).style.width = "100%";
+	document.getElementById("escape").style.display = "block";
+}
+
+function closeOverlay(item, content) {
+	document.getElementById(content).style.display = "none";
+	document.getElementById(item).style.width = "0%";
+	document.getElementById("escape").style.display = "none";
+}
+
+
+//Gestures:
 
 function mdown(ev) {
 	if (ev.type == "mousedown")
@@ -71,6 +142,8 @@ function mup(ev) {
 }
 
 
+//Load Tabs
+
 function loadContent(name, num) {
 	for (var i=0; i<listLength2; i++) {
 		if(list[num][i] == name) {
@@ -86,6 +159,8 @@ function loadContent(name, num) {
 }
 
 
+//Mobile hamburger Menu
+
 function hamburger() {
 	var menu = document.getElementById('menu');
 	var changed = false;
@@ -100,61 +175,5 @@ function hamburger() {
 			changed = true;
 		}
 }
-
-
-var thisSlide = 0;
-var picSlide = 0;
-slideShow(picSlide);
-
-document.onkeydown = function(evt) {
-	evt = evt || window.event;
-	var isEscape = false;
-	if ("key" in evt) {
-		isEscape = (evt.key == "Escape" || evt.key == "Esc");
-	} else {
-		isEscape = (evt.keyCode == 27);
-	}
-	if (isEscape) {
-		closeOverlay('lodging', 'lodging-contents');
-		closeOverlay('slideshow', 'slideshow-contents');
-	}
-};
-
-function slideShow(n) {
-	var pSlides = document.getElementsByClassName("slide-img");
-	var maxSlides = pSlides.length;
-	
-	picSlide += n;
-	if (picSlide >= maxSlides) {
-		picSlide = 0;
-	} else if (picSlide < 0) {
-		picSlide = maxSlides-1;
-	}
-
-	for (var i = 0; i < maxSlides; i++) {
-		pSlides[i].style.display = "none";
-	}
-	
-	pSlides[picSlide].style.display = "inline-block";
-}
-
-
-function openOverlay(item, content, n) {
-	if (n>=0) {
-		picSlide = 0;
-		slideShow(n);
-	}
-	document.getElementById(content).style.display = "inline-block";
-	document.getElementById(item).style.width = "100%";
-	document.getElementById("escape").style.display = "block";
-}
-
-function closeOverlay(item, content) {
-	document.getElementById(content).style.display = "none";
-	document.getElementById(item).style.width = "0%";
-	document.getElementById("escape").style.display = "none";
-}
-
-
 
 
