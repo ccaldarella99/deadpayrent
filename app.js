@@ -10,7 +10,7 @@ var getId = 0;
 var x = 0;
 var y = 0;
 
-let picsArray = ["DCS_0614.JPG", "DCS_0620.JPG", "DCS_0622.JPG", "DCS_0624.JPG"];
+//let picsArray = ["DCS_0614.JPG", "DCS_0620.JPG", "DCS_0622.JPG", "DCS_0624.JPG"];
 var thisSlide = 0;
 var picSlide = 0;
 slideShow(picSlide);
@@ -69,15 +69,15 @@ function openOverlay(item, content, n) {
 		picSlide = 0;
 		slideShow(n);
 	}
-	document.getElementById(content).style.display = "inline-block";
 	document.getElementById(item).style.width = "100%";
 	document.getElementById("escape").style.display = "block";
+	document.getElementById(content).style.display = "inline-block";
 }
 
 function closeOverlay(item, content) {
 	document.getElementById(content).style.display = "none";
-	document.getElementById(item).style.width = "0%";
 	document.getElementById("escape").style.display = "none";
+	document.getElementById(item).style.width = "0%";
 }
 
 
