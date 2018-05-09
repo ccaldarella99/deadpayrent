@@ -131,17 +131,18 @@ a.content-text:hover {
 }
 
 .reel {
-	text-align:center;
-	height: 100px;
+	height: 90px;
 	display:inline;
 	padding:0;
-	vertical-align: middle;
+/*	text-align:center;
+	vertical-align: middle;*/
 	/*margin:10px;*/
+	border: solid 2px #fff;
 	transition: all 0.2s ease;
 }
 
 .reel:hover {
-	height:120px;
+	height:105px;
 	cursor: pointer;
 }
 
@@ -214,16 +215,23 @@ a.content-text:hover {
 }
 
 .img-container {
-	max-width: 160px;
-	max-height: 120px;
+	width: 170px;
+	height: 130px;
 	margin: auto;
     font-size: 1em;
 	padding: 1em;
 	display:inline-block;
 	position: relative;
 	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
+	/*background-color: #fff;*/
 }
 
+#photo {
+	height: 2000px;
+	margin-bottom: 50px;
+}
 
 
 
