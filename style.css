@@ -234,6 +234,9 @@ a.content-text:hover {
 }
 
 
+#photo2 {
+	height: 400px;
+}
 
 
 @media only screen and (min-width: 535px) {
@@ -258,6 +261,13 @@ a.content-text:hover {
 	.overlay {
 		z-index:-2;
 		display:none;
+	}
+}
+
+@media only screen and (max-width: 560px) {
+	.reel {
+		max-height: 100px;
+		max-width: 100px;
 	}
 }
 
