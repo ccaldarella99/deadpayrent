@@ -178,6 +178,15 @@ a.content-text:hover {
 	transition: all 0.7s ease;
 }
 
+.slide-img-mob {
+	margin: 30px auto;
+	display:none;
+	text-align: center;
+	/*max-height: 70%;*/
+	max-width: 70%;
+	transition: all 0.7s ease;
+}
+
 #top-row, #bottom-row {
 	display: inline-block;
 	margin: 10px;
@@ -310,11 +319,12 @@ a.content-text:hover {
 		display:inline;
 	}
 	.hamu {
-		position:relative;
-		left:30%;
+		z-index:11;
+		position:fixed;
+		left:10%;
 	}
 	#hamburger {
-		z-index:10;
+		z-index:11;
 		width: 2.35em;
 		height: 0.3125em;
 		background-color:#fff;
@@ -344,11 +354,12 @@ a.content-text:hover {
 		display:inline-block;
 	}
 	.menu {
-		position:absolute;
+		position:fixed;
 		background-color:#555;
 		border-radius:10px;
-		z-index:11;
-		left:45%;
+		z-index:12;
+		left:15%;
+		width: 40%;
 	}
 	.content {
 		height:400px;
@@ -359,8 +370,13 @@ a.content-text:hover {
 	}
 	#foot {
 		position: fixed;
-		top:90%;
-		left:15%
+		bottom: -20px;
+		text-align: center;
+		margin: 0 auto;
+		background-color: #333;
+		width: 100%;
+		left: 1px;
+		padding: 20px;
 	}
 	.new{
 		width:90%;

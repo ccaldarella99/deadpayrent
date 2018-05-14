@@ -64,6 +64,25 @@ function slideShow(n) {
 }
 
 
+function slideShowMobile(n) {
+	var pSlides = document.getElementsByClassName("slide-img-mob");
+	var maxSlides = pSlides.length;
+	
+	picSlide += n;
+	if (picSlide >= maxSlides) {
+		picSlide = 0;
+	} else if (picSlide < 0) {
+		picSlide = maxSlides-1;
+	}
+
+	for (var i = 0; i < maxSlides; i++) {
+		pSlides[i].style.display = "none";
+	}
+	
+	pSlides[picSlide].style.display = "inline-block";
+}
+
+
 function openOverlay(item, content, n) {
 	if (n>=0) {
 		picSlide = 0;
