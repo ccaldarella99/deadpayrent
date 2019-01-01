@@ -66,6 +66,36 @@ a.navlinks:hover, a.navlinks:focus {
 	text-decoration:none;
 }
 
+.error-header {
+	font-size:3em;
+	font-weight:bold;
+	color:#fff;
+	white-space:nowrap;
+	padding: 0.5em;
+}
+
+.error-text {
+	font-size:1.4em;
+	font-weight:bold;
+	color:#fff;
+	white-space:nowrap;
+	padding: 0.5em;
+}
+
+.error-link {
+	font-size:1.1em;
+	font-weight:bold;
+	color:#acf;
+	white-space:nowrap;
+	padding: 0.5em;
+}
+
+.error-link:hover, .error-link:focus {
+	color:#57a;
+	text-decoration:none;
+}
+
+
 .show {
 	display:block;
 }
