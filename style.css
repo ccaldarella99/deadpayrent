@@ -169,6 +169,7 @@ a.content-text:hover {
 	/*margin:10px;*/
 	border: solid 2px #fff;
 	transition: all 0.2s ease;
+	z-index:1;
 }
 
 .reel:hover {
@@ -182,14 +183,62 @@ a.content-text:hover {
 .item-overlay {
 	text-align: center;
 	position:relative;
+	width:100%;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ssLeft {
+	left:10px;
+}
+
+.ssRight {
+	right:10px;
 }
 
 .ssLeft, .ssRight {
+	position: absolute;
+	top: 10px;
 	display:inline-block;
 	font-size:2em;
+	width:50%;
+	height: 110%;
+	/*background-color:red;*/
+}
+
+.ssLeft-mobile, .ssRight-mobile {
+	display:inline-block;
+	font-size:2em;
+/*	position: absolute;
+	top: 10px;
+	width:50%;
+	height: 210%;
+	background-color:red;*/
+}
+
+#left-btn {
+	left:20px;
+}
+
+#right-btn {
+	right:20px;
 }
 
 #left-btn, #right-btn {
+	position: absolute;
+	top:45%;
+	cursor: pointer;
+	color: #fff;
+	font-size: 1.5em;
+}
+
+#left-btn-mob, #right-btn-mob {
+	/*position: absolute;
+	top:45%;*/
 	cursor: pointer;
 	color: #fff;
 	font-size: 1.5em;
@@ -197,6 +246,11 @@ a.content-text:hover {
 
 #slideshow {
 	text-align: center;
+}
+
+
+.slide-img-mob, .slide-img {
+	border:10px #333 solid;
 }
 
 
@@ -246,7 +300,7 @@ a.content-text:hover {
 	color: #fff;
 	font-size:0.8em;
 	text-align: center;
-	bottom: 5px;
+	bottom: -2px;
 	display:none;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -407,6 +461,7 @@ a.content-text:hover {
 		width: 100%;
 		left: 1px;
 		padding: 20px;
+		z-index: 10;
 	}
 	.new{
 		width:90%;
