@@ -86,6 +86,7 @@ function slideShowMobile(n) {
 	
 	//pSlides[picSlide].style.display = "inline-block";
 	//document.getElementById(pSlides[picSlide]).classList.add('show-img-mob');
+	pSlides[picSlide].classList.remove('hide-img-mob');
 	pSlides[picSlide].classList.add('show-img-mob');
 }
 
@@ -99,17 +100,17 @@ function openOverlayMobile(item, content, n) {
 	//document.getElementById("escape").style.display = "block";
 	document.getElementById(content).style.display = "inline-block";
 	
-	//document.getElementById('left-btn-mob').style.width = "100%";
-	//document.getElementById('right-btn-mob').style.width = "100%";
+	document.getElementById('left-btn-mob').style.display = "block";
+	document.getElementById('right-btn-mob').style.display = "block";
 }
 
 function closeOverlayMobile(item, content) {
 	document.getElementById(content).style.display = "none";
-	document.getElementById("escape").style.display = "none";
+	//document.getElementById("escape").style.display = "none";
 	document.getElementById(item).style.width = "0%";
 	
-	//document.getElementById('left-btn-mob').style.width = "0";
-	//document.getElementById('right-btn-mob').style.width = "0";
+	document.getElementById('left-btn-mob').style.display = "none";
+	document.getElementById('right-btn-mob').style.display = "none";
 }
 
 

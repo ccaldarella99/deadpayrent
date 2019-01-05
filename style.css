@@ -246,12 +246,13 @@ a.content-text:hover {
 
 #left-btn-mob, #right-btn-mob {
 	position: fixed;
+	top: 6%;
+	display:none;
 	/*left:-100%;*/
-	width: 0px;
+	width: 40px;
 	cursor: pointer;
 	color: #fff;
 	font-size: 1.5em;
-	background-color: red;
 }
 
 #slideshow {
@@ -272,7 +273,7 @@ a.content-text:hover {
 	margin: 30px auto;
 	text-align: center;
 	transition: all 0.7s ease;
-	top: 10%;
+	top: 12%;
 	width: 0;
 }
 
