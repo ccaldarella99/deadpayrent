@@ -76,10 +76,40 @@ function slideShowMobile(n) {
 	}
 
 	for (var i = 0; i < maxSlides; i++) {
-		pSlides[i].style.display = "none";
+		//console.log(pSlides[i]);
+		//pSlides[i].style.display = "none";
+		//document.getElementById(pSlides[i]).classList.remove('show-img-mob');
+		//document.getElementById(pSlides[i]).classList.add('hide-img-mob');
+		pSlides[i].classList.remove('show-img-mob');
+		pSlides[i].classList.add('hide-img-mob');
 	}
 	
-	pSlides[picSlide].style.display = "inline-block";
+	//pSlides[picSlide].style.display = "inline-block";
+	//document.getElementById(pSlides[picSlide]).classList.add('show-img-mob');
+	pSlides[picSlide].classList.add('show-img-mob');
+}
+
+
+function openOverlayMobile(item, content, n) {
+	if (n>=0) {
+		picSlide = 0;
+		slideShowMobile(n);
+	}
+	document.getElementById(item).style.width = "100%";
+	//document.getElementById("escape").style.display = "block";
+	document.getElementById(content).style.display = "inline-block";
+	
+	//document.getElementById('left-btn-mob').style.width = "100%";
+	//document.getElementById('right-btn-mob').style.width = "100%";
+}
+
+function closeOverlayMobile(item, content) {
+	document.getElementById(content).style.display = "none";
+	document.getElementById("escape").style.display = "none";
+	document.getElementById(item).style.width = "0%";
+	
+	//document.getElementById('left-btn-mob').style.width = "0";
+	//document.getElementById('right-btn-mob').style.width = "0";
 }
 
 
@@ -183,14 +213,14 @@ function loadContent(name, num) {
 function hamburger() {
 	var menu = document.getElementById('menu');
 	var changed = false;
-		if(menu.classList.contains('show') && !changed)
+		if(menu.classList.contains('show-menu') && !changed)
 		{
-			menu.classList.remove('show');
-			menu.classList.add('hide');
+			menu.classList.remove('show-menu');
+			menu.classList.add('hide-menu');
 			changed = true;
-		} else if (menu.classList.contains('hide') && !changed) {
-			menu.classList.remove('hide');
-			menu.classList.add('show');
+		} else if (menu.classList.contains('hide-menu') && !changed) {
+			menu.classList.remove('hide-menu');
+			menu.classList.add('show-menu');
 			changed = true;
 		}
 }
