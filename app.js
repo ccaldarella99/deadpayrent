@@ -16,6 +16,8 @@ var picSlide = 0;
 slideShow(picSlide);
 closeOverlay('slideshow', 'slideshow-contents');
 
+//PROMOTIONAL: BEEN HERE BEFORE
+openOverlay('promo_bhb','promo_bhb-contents');
 
 //Slide Show OVERLAY
 

@@ -269,6 +269,10 @@ a.content-text:hover {
 	transition: all 0.7s ease;
 }
 
+#promo_bhb-img {
+	max-height: 500px;
+}
+
 .slide-img-mob {
 	margin: 30px auto;
 	text-align: center;
@@ -307,6 +311,7 @@ a.content-text:hover {
 
 .close-btn:hover, .close-btn:active{
 	text-decoration:none;
+	cursor: pointer;
 	color: #fff;
 }
 
