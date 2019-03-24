@@ -48,6 +48,10 @@ a {
 	width:190px;
 }
 
+#album:hover {
+	cursor: pointer;
+}
+
 .nav-bar {
 	font-size:1.4em;
 	font-weight:bold;
@@ -117,9 +121,20 @@ a.navlinks:hover, a.navlinks:focus {
 	border: solid red 2px;
 }
 
-.album-promo {
-	width:100%;
+.square-promo {
+	width:80%;
+    margin: 5px auto;
+    display: block;
 }
+
+.album-promo {
+	/*width:100%;*/
+	width: 80%;
+	border: solid white 2px;
+    margin: 5px auto;
+    display: block;
+}
+
 .content-text {
 	color:#ccc;
 	padding: 0 0 1em 1em;
@@ -269,7 +284,20 @@ a.content-text:hover {
 	transition: all 0.7s ease;
 }
 
+.slide-img-single {
+	border:10px #333 solid;
+	margin: 30px auto;
+	display:none;/*inline-block;*/
+	text-align: center;
+	max-height: 600px;
+	transition: all 0.7s ease;
+}
+
 #promo_bhb-img {
+	max-height: 500px;
+}
+
+#band_photo-img {
 	max-height: 500px;
 }
 
@@ -316,6 +344,19 @@ a.content-text:hover {
 }
 
 #escape {
+	background-color: #777;
+	position: absolute;
+	color: #fff;
+	font-size:0.8em;
+	text-align: center;
+	bottom: -2px;
+	display:none;
+	padding-left: 5px;
+	padding-right: 5px;
+	opacity: 0.6;
+}
+
+#escape-single {
 	background-color: #777;
 	position: absolute;
 	color: #fff;

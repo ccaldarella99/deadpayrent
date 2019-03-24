@@ -11,13 +11,16 @@ var x = 0;
 var y = 0;
 
 //let picsArray = ["DCS_0614.JPG", "DCS_0620.JPG", "DCS_0622.JPG", "DCS_0624.JPG"];
+var promoOffset = 0;//2;
 var thisSlide = 0;
 var picSlide = 0;
 slideShow(picSlide);
 closeOverlay('slideshow', 'slideshow-contents');
 
 //PROMOTIONAL: BEEN HERE BEFORE
-openOverlay('promo_bhb','promo_bhb-contents');
+openSingleOverlay('single_photo','promo_bhb-contents', 1);
+//openSingleOverlay('single_photo','single_photo-contents');
+//openSingleOverlay('promo_bhb','promo_bhb-contents');
 
 //Slide Show OVERLAY
 
@@ -38,6 +41,8 @@ document.onkeydown = function(evt) {
 	}
 	if (isEscape) {
 		closeOverlay('slideshow', 'slideshow-contents');
+		closeOverlay('single_photo','promo_bhb-contents');
+		closeOverlay('single_photo','band_photo-contents');
 	}
 	if (isLeft) {
 		slideShow(-1);
@@ -49,16 +54,18 @@ document.onkeydown = function(evt) {
 
 function slideShow(n) {
 	var pSlides = document.getElementsByClassName("slide-img");
-	var maxSlides = pSlides.length;
+	var maxSlides = pSlides.length - promoOffset;
+	var firstSlide = 0;
 	
 	picSlide += n;
 	if (picSlide >= maxSlides) {
-		picSlide = 0;
-	} else if (picSlide < 0) {
-		picSlide = maxSlides-1;
+		picSlide = firstSlide;
+	} else if (picSlide < firstSlide) {
+		picSlide = maxSlides - 1;
 	}
+	//console.log("PIC Slides: " + picSlide);
 
-	for (var i = 0; i < maxSlides; i++) {
+	for (var i = 0; i < maxSlides + promoOffset; i++) {
 		pSlides[i].style.display = "none";
 	}
 	
@@ -68,7 +75,7 @@ function slideShow(n) {
 
 function slideShowMobile(n) {
 	var pSlides = document.getElementsByClassName("slide-img-mob");
-	var maxSlides = pSlides.length;
+	var maxSlides = pSlides.length;// - 1;
 	
 	picSlide += n;
 	if (picSlide >= maxSlides) {
@@ -117,6 +124,7 @@ function closeOverlayMobile(item, content) {
 
 
 function openOverlay(item, content, n) {
+	//console.log("openOverlay: " + n)
 	if (n>=0) {
 		picSlide = 0;
 		slideShow(n);
@@ -126,10 +134,30 @@ function openOverlay(item, content, n) {
 	document.getElementById(content).style.display = "inline-block";
 }
 
+function openSingleOverlay(item, content, n) {
+	var singleSlides = document.getElementsByClassName("slide-img-single");
+
+	for (var i = 0; i < singleSlides.length; i++) {
+		singleSlides[i].style.display = "none";
+	}
+	
+	singleSlides[n].style.display = "inline-block";
+	
+	document.getElementById(item).style.width = "100%";
+	document.getElementById("escape").style.display = "block";
+	document.getElementById(content).style.display = "inline-block";
+}
+
 function closeOverlay(item, content) {
 	document.getElementById(content).style.display = "none";
 	document.getElementById("escape").style.display = "none";
 	document.getElementById(item).style.width = "0%";
+}
+
+function closeAllOverlay(item, content) {
+	closeOverlay('slideshow', 'slideshow-contents');
+	closeOverlay('single_photo','promo_bhb-contents');
+	closeOverlay('single_photo','band_photo-contents');
 }
 
 
