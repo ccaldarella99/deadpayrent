@@ -37,6 +37,10 @@ a {
 #icons:hover {
 	color:white;
 }
+.mob-link {
+	font-weight: bold;
+	color:white;
+}
 .headline{
 	font-size:3em;
 }
@@ -261,7 +265,8 @@ a.content-text:hover {
 
 #left-btn-mob, #right-btn-mob {
 	position: fixed;
-	top: 6%;
+	top: 45%;
+	/*top: 6%;*/
 	display:none;
 	/*left:-100%;*/
 	width: 40px;
@@ -291,6 +296,15 @@ a.content-text:hover {
 	text-align: center;
 	max-height: 600px;
 	transition: all 0.7s ease;
+}
+
+.slide-img-single-mob {
+	border:10px #333 solid;
+	margin: 30px auto;
+	text-align: center;
+	max-height: 600px;
+	transition: all 0.7s ease;
+	heigh: 90%;
 }
 
 #promo_bhb-img {
@@ -393,7 +407,10 @@ a.content-text:hover {
 	height: 400px;
 }
 
-
+#promo-close-mob {
+	color: black;
+}
+	
 @media only screen and (min-width: 535px) {
 	#iconF {
 		display:none;
@@ -450,7 +467,11 @@ a.content-text:hover {
 		border:10px #333 solid;
 		margin: 12%;
 	}
-
+	
+	.close-btn, .close-btn:link {
+		top: 50px;
+	}
+	
 	.mob {
 		font-size:1em;
 		display:inline;
@@ -518,15 +539,18 @@ a.content-text:hover {
 	.menu {
 		position:fixed;
 		background-color:#555;
-		border-radius:10px;
+		/*border-radius:10px;*/
 		z-index:12;
 		left:20%;
-		width: 40%;
+		top: -3%;
+		/*width: 40%;*/
+		width: 100%;
+		height: 105%;
 		padding: 5px;
 		transition: all 0.7s ease;
 	}
 	.content {
-		height:400px;
+		height:800px;
 	}
 	a.navlinks {
 		color:#fff;
@@ -586,14 +610,16 @@ a.content-text:hover {
 .show-menu {
 	/*display:block;*/
 	position: fixed;
-	top:12%;
-	left:40%;
+	/*top:20%;*/
+	left:0;
+	opacity: .85;
+	width: 100%;
 	transition: all 0.7s ease;
 }
 .hide-menu {
 	/*display:none;*/
 	position: fixed;
-	top:12%;
-	left:-250px;
+	/*top:20%;*/
+	left:-500px;
 	transition: all 0.7s ease;
 }
