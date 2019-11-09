@@ -349,6 +349,7 @@ a.content-text:hover {
     right: 45px;
     font-size: 3.75em;
 	z-index:20;
+	text-shadow: 1px 1px 2px #000, -1px 1px 2px #000, 1px -1px 2px #000, -1px -1px 2px #000;
 }
 
 .close-btn:hover, .close-btn:active{
@@ -409,6 +410,7 @@ a.content-text:hover {
 
 #promo-close-mob {
 	color: black;
+	text-shadow: 1px 1px 2px #fff, -1px 1px 2px #fff, 1px -1px 2px #fff, -1px -1px 2px #fff;
 }
 	
 @media only screen and (min-width: 535px) {
