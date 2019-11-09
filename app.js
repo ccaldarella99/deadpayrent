@@ -17,33 +17,44 @@ var picSlide = 0;
 slideShow(picSlide);
 closeOverlay('slideshow', 'slideshow-contents');
 
-//PROMOTIONAL: BEEN HERE BEFORE
-openSingleOverlay('single_photo','promo_bhb-contents', 1);
-openSingleOverlayMobile('single_photo-mob','promo_bhb-contents-mob', 0);
 
-
-
-
-
-
+//PROMOTIONAL OVERLAY
+//openSingleOverlay('single_photo','promo_bhb-contents', 1);
+//openSingleOverlayMobile('single_photo-mob','promo_bhb-contents-mob', 0);
+var promo_exp = 20191120;
 var promo_file = "https://www.deadpayrent.com/res/PROMO.jpg";
+
+var date_now = new Date();
+var yyyy_num = date_now.getFullYear();
+var mm_num = date_now.getMonth()+1;
+var dd_num = date_now.getDate();
+
+var yyyy = date_now.getFullYear().toString();
+var mm = (mm_num > 9 ) ? mm_num.toString() : "0" + mm_num.toString();
+var dd = (dd_num > 9 ) ? dd_num.toString() : "0" + dd_num.toString();
+
+var full_date = yyyy + mm + dd;
+var today_date = parseInt(full_date);
+var date_is_current = (today_date <= promo_exp);
+
 //$.get(promo_file).done(function () {
 //	console.log("jQuery: success");
 //}).fail(function () {
 //   console.log("jQuery: FAILED");
 //});
-fetch(promo_file, { method: 'HEAD' })
- .then(res => {
-	if (res.ok) {
-		openSingleOverlay('single_photo','promo_bhb-contents', 1);
-		openSingleOverlayMobile('single_photo-mob','promo_bhb-contents-mob', 0);
-		console.log('FETCH: Promo image exists.');
- 	} else {
- 		console.log('FETCH: Promo image does not exist.');
-	}
- }).catch(err => console.log('FETCH: Error getting Promo image:\n', err));
-
-
+if(date_is_current){
+	console.log('FETCH: Promo falls within Date-Range.');
+	fetch(promo_file, { method: 'HEAD' })
+	 .then(res => {
+		if (res.ok) {
+			console.log('FETCH: Promo image exists.');
+			openSingleOverlay('single_photo','promo_bhb-contents', 1);
+			openSingleOverlayMobile('single_photo-mob','promo_bhb-contents-mob', 0);
+		} else {
+			console.log('FETCH: Promo image does not exist.');
+		}
+	 }).catch(err => console.log('FETCH: Error getting Promo image:\n', err));
+}
 
 
 //Slide Show OVERLAY
