@@ -21,6 +21,31 @@ closeOverlay('slideshow', 'slideshow-contents');
 openSingleOverlay('single_photo','promo_bhb-contents', 1);
 openSingleOverlayMobile('single_photo-mob','promo_bhb-contents-mob', 0);
 
+
+
+
+
+
+var promo_file = "https://www.deadpayrent.com/res/PROMO.jpg";
+//$.get(promo_file).done(function () {
+//	console.log("jQuery: success");
+//}).fail(function () {
+//   console.log("jQuery: FAILED");
+//});
+fetch(promo_file, { method: 'HEAD' })
+ .then(res => {
+	if (res.ok) {
+		openSingleOverlay('single_photo','promo_bhb-contents', 1);
+		openSingleOverlayMobile('single_photo-mob','promo_bhb-contents-mob', 0);
+		console.log('FETCH: Promo image exists.');
+ 	} else {
+ 		console.log('FETCH: Promo image does not exist.');
+	}
+ }).catch(err => console.log('FETCH: Error getting Promo image:\n', err));
+
+
+
+
 //Slide Show OVERLAY
 
 document.onkeydown = function(evt) {
