@@ -42,6 +42,9 @@ var date_is_current = (today_date <= promo_exp);
 //}).fail(function () {
 //   console.log("jQuery: FAILED");
 //});
+//console.log(today_date);
+//console.log(promo_exp);
+//console.log(date_is_current);
 if(date_is_current){
 	console.log('FETCH: Promo falls within Date-Range.');
 	fetch(promo_file, { method: 'HEAD' })

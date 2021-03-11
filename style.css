@@ -37,6 +37,13 @@ a {
 #icons:hover {
 	color:white;
 }
+#ytm-icon {
+	height: 2.25em;
+	margin: 0 0 16px 0;
+}
+#ytm-icon:hover {
+	color:white;
+}
 .mob-link {
 	font-weight: bold;
 	color:white;
@@ -449,6 +456,10 @@ a.content-text:hover {
 	#icons {
 		font-size:1.7em;
 	}
+	#ytm-icon {
+		height:1.7em;
+		margin: 0 0 10px 0;
+	}
 	#album {
 		width:10em;
 	}
@@ -457,6 +468,10 @@ a.content-text:hover {
 @media only screen and (max-width: 700px) {
 	#icons {
 		font-size:1em;
+	}
+	#ytm-icon {
+		height:1em;
+		margin: 0 0 3px 0;
 	}
 	#album {
 		width:7.5em;
@@ -521,6 +536,10 @@ a.content-text:hover {
 	#icons {
 		font-size:1em;
 		color:#ddd;
+	}
+	#ytm-icon {
+		height:2em;
+		margin: 0 0 12px 0;
 	}
 	#iconF {
 		font-size:2em;
